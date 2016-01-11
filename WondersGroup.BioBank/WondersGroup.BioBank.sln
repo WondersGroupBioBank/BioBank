@@ -1,0 +1,54 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.24720.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WondersGroup.BioBank.Web", "WondersGroup.BioBank.Web\WondersGroup.BioBank.Web.csproj", "{0D35A3CD-0420-4519-86B4-D5AD4325A681}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Document", "Document", "{A8B1EA5D-73A2-47C1-9B7F-59608B0DED5E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WondersGroup.BioBank.Service", "WondersGroup.BioBank.Service\WondersGroup.BioBank.Service.csproj", "{19788909-C708-4E3B-84B2-CB0C844559D5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WondersGroup.BioBank.Data", "WondersGroup.BioBank.Data\WondersGroup.BioBank.Data.csproj", "{1B91CE6C-FF3A-4508-B665-501A5EFD6043}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WondersGroup.BioBank.Model", "WondersGroup.BioBank.Model\WondersGroup.BioBank.Model.csproj", "{AF115FD9-87A4-44A6-BEF9-E822E2E31A4E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WondersGroup.BioBank.Log", "WondersGroup.BioBank.Log\WondersGroup.BioBank.Log.csproj", "{894BC978-65BD-4C49-9ADD-A42F52F59D4F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WondersGroup.BioBank.Core", "WondersGroup.BioBank.Core\WondersGroup.BioBank.Core.csproj", "{B9B6B7BE-C338-4ADD-A517-419C287722E9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0D35A3CD-0420-4519-86B4-D5AD4325A681}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0D35A3CD-0420-4519-86B4-D5AD4325A681}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0D35A3CD-0420-4519-86B4-D5AD4325A681}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0D35A3CD-0420-4519-86B4-D5AD4325A681}.Release|Any CPU.Build.0 = Release|Any CPU
+		{19788909-C708-4E3B-84B2-CB0C844559D5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{19788909-C708-4E3B-84B2-CB0C844559D5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{19788909-C708-4E3B-84B2-CB0C844559D5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{19788909-C708-4E3B-84B2-CB0C844559D5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1B91CE6C-FF3A-4508-B665-501A5EFD6043}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1B91CE6C-FF3A-4508-B665-501A5EFD6043}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1B91CE6C-FF3A-4508-B665-501A5EFD6043}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1B91CE6C-FF3A-4508-B665-501A5EFD6043}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AF115FD9-87A4-44A6-BEF9-E822E2E31A4E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AF115FD9-87A4-44A6-BEF9-E822E2E31A4E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AF115FD9-87A4-44A6-BEF9-E822E2E31A4E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AF115FD9-87A4-44A6-BEF9-E822E2E31A4E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{894BC978-65BD-4C49-9ADD-A42F52F59D4F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{894BC978-65BD-4C49-9ADD-A42F52F59D4F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{894BC978-65BD-4C49-9ADD-A42F52F59D4F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{894BC978-65BD-4C49-9ADD-A42F52F59D4F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B9B6B7BE-C338-4ADD-A517-419C287722E9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B9B6B7BE-C338-4ADD-A517-419C287722E9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B9B6B7BE-C338-4ADD-A517-419C287722E9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B9B6B7BE-C338-4ADD-A517-419C287722E9}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
