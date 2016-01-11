@@ -1,10 +1,10 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>af115fd9-87a4-44a6-bef9-e822e2e31a4e</ProjectGuid>
+    <ProjectGuid>{AF115FD9-87A4-44A6-BEF9-E822E2E31A4E}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>WondersGroup.BioBank.Model</RootNamespace>
@@ -30,24 +30,125 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="System"/>
-    
-    <Reference Include="System.Core"/>
-    <Reference Include="System.Xml.Linq"/>
-    <Reference Include="System.Data.DataSetExtensions"/>
-    
-    
-    <Reference Include="Microsoft.CSharp"/>
-    
-    <Reference Include="System.Data"/>
-    
-    <Reference Include="System.Net.Http"/>
-    
-    <Reference Include="System.Xml"/>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="Models\BioBankContext.cs" />
+    <Compile Include="Models\DIC_DEPARTMENT.cs" />
+    <Compile Include="Models\DIC_DEVICE_TYPE.cs" />
+    <Compile Include="Models\DIC_GENERAL.cs" />
+    <Compile Include="Models\DIC_PRACTITIONER.cs" />
+    <Compile Include="Models\DIC_SAMPLE_DEAL.cs" />
+    <Compile Include="Models\DIC_SAMPLE_ORGAN.cs" />
+    <Compile Include="Models\DIC_SAMPLE_TYPE.cs" />
+    <Compile Include="Models\DIC_SAMPLE_TYPE_bak.cs" />
+    <Compile Include="Models\DIC_SPACE_TYPE.cs" />
+    <Compile Include="Models\INTERFACE_HIS_PATIENT_INFO.cs" />
+    <Compile Include="Models\Mapping\DIC_DEPARTMENTMap.cs" />
+    <Compile Include="Models\Mapping\DIC_DEVICE_TYPEMap.cs" />
+    <Compile Include="Models\Mapping\DIC_GENERALMap.cs" />
+    <Compile Include="Models\Mapping\DIC_PRACTITIONERMap.cs" />
+    <Compile Include="Models\Mapping\DIC_SAMPLE_DEALMap.cs" />
+    <Compile Include="Models\Mapping\DIC_SAMPLE_ORGANMap.cs" />
+    <Compile Include="Models\Mapping\DIC_SAMPLE_TYPEMap.cs" />
+    <Compile Include="Models\Mapping\DIC_SAMPLE_TYPE_bakMap.cs" />
+    <Compile Include="Models\Mapping\DIC_SPACE_TYPEMap.cs" />
+    <Compile Include="Models\Mapping\INTERFACE_HIS_PATIENT_INFOMap.cs" />
+    <Compile Include="Models\Mapping\RULE_BH_MAKEMap.cs" />
+    <Compile Include="Models\Mapping\RULE_DEVICE_NUMBERMap.cs" />
+    <Compile Include="Models\Mapping\RULE_DEVICE_TPYESPACE_LOCATIONMap.cs" />
+    <Compile Include="Models\Mapping\RULE_DEVICE_TPYESPACE_RELATIONMap.cs" />
+    <Compile Include="Models\Mapping\RULE_DEVICE_TYPESPACE_DEFINEMap.cs" />
+    <Compile Include="Models\Mapping\RULE_DEVICE_TYPESPACE_DEFINE_DETAILSMap.cs" />
+    <Compile Include="Models\Mapping\RULE_DEVICE_TYPESPACE_MODELMap.cs" />
+    <Compile Include="Models\Mapping\YBK_DEVICE_ENTITY_INFORMATIONMap.cs" />
+    <Compile Include="Models\Mapping\YBK_DEVICE_INFORMATIONMap.cs" />
+    <Compile Include="Models\Mapping\YBK_DEVICE_INFORMATION_PICTUREMap.cs" />
+    <Compile Include="Models\Mapping\YBK_DEVICE_OBJECT_INFORMATIONMap.cs" />
+    <Compile Include="Models\Mapping\YBK_DEVICE_SPACEUSE_INDEXMap.cs" />
+    <Compile Include="Models\Mapping\YBK_DEVICE_SPACEUSE_INFORMATIONMap.cs" />
+    <Compile Include="Models\Mapping\YBK_PATIENT_CARDMap.cs" />
+    <Compile Include="Models\Mapping\YBK_PATIENT_MEDICAL_RECORDMap.cs" />
+    <Compile Include="Models\Mapping\YBK_PATIENT_PATIENTINFOMap.cs" />
+    <Compile Include="Models\Mapping\YBK_PROJECT_INFORMATIONMap.cs" />
+    <Compile Include="Models\Mapping\YBK_PROJECT_INFORMATION_CDMap.cs" />
+    <Compile Include="Models\Mapping\YBK_QUESTIONNAIREMap.cs" />
+    <Compile Include="Models\Mapping\YBK_QUESTIONNAIRE_ATTRIBUTEMap.cs" />
+    <Compile Include="Models\Mapping\YBK_QUESTIONNAIRE_ATTRIBUTE_CODOMAINMap.cs" />
+    <Compile Include="Models\Mapping\YBK_QUESTIONNAIRE_CASEMap.cs" />
+    <Compile Include="Models\Mapping\YBK_QUESTIONNAIRE_CASE_SUBJECTMap.cs" />
+    <Compile Include="Models\Mapping\YBK_QUESTIONNAIRE_RESULTMap.cs" />
+    <Compile Include="Models\Mapping\YBK_QUESTIONNAIRE_SUBJECTMap.cs" />
+    <Compile Include="Models\Mapping\YBK_SAMPLE_APPLICATIONMap.cs" />
+    <Compile Include="Models\Mapping\YBK_SAMPLE_APPLICATION_DELIVERYMap.cs" />
+    <Compile Include="Models\Mapping\YBK_SAMPLE_APPLICATION_DELIVERY_CDMap.cs" />
+    <Compile Include="Models\Mapping\YBK_SAMPLE_APPLICATION_DELIVERY_DETAILSMap.cs" />
+    <Compile Include="Models\Mapping\YBK_SAMPLE_APPLICATION_DETAILSMap.cs" />
+    <Compile Include="Models\Mapping\YBK_SAMPLE_BARCODE_BATCHMap.cs" />
+    <Compile Include="Models\Mapping\YBK_SAMPLE_BARCODE_INFORMATIONMap.cs" />
+    <Compile Include="Models\Mapping\YBK_SAMPLE_INFORMATIONMap.cs" />
+    <Compile Include="Models\Mapping\YBK_SAMPLE_INFORMATION_CDMap.cs" />
+    <Compile Include="Models\Mapping\YBK_SAMPLE_OPERATION_BASEMap.cs" />
+    <Compile Include="Models\Mapping\YBK_SAMPLE_OPERATION_DETAILSMap.cs" />
+    <Compile Include="Models\Mapping\YBK_SAMPLE_PIPE_INFOMap.cs" />
+    <Compile Include="Models\RULE_BH_MAKE.cs" />
+    <Compile Include="Models\RULE_DEVICE_NUMBER.cs" />
+    <Compile Include="Models\RULE_DEVICE_TPYESPACE_LOCATION.cs" />
+    <Compile Include="Models\RULE_DEVICE_TPYESPACE_RELATION.cs" />
+    <Compile Include="Models\RULE_DEVICE_TYPESPACE_DEFINE.cs" />
+    <Compile Include="Models\RULE_DEVICE_TYPESPACE_DEFINE_DETAILS.cs" />
+    <Compile Include="Models\RULE_DEVICE_TYPESPACE_MODEL.cs" />
+    <Compile Include="Models\YBK_DEVICE_ENTITY_INFORMATION.cs" />
+    <Compile Include="Models\YBK_DEVICE_INFORMATION.cs" />
+    <Compile Include="Models\YBK_DEVICE_INFORMATION_PICTURE.cs" />
+    <Compile Include="Models\YBK_DEVICE_OBJECT_INFORMATION.cs" />
+    <Compile Include="Models\YBK_DEVICE_SPACEUSE_INDEX.cs" />
+    <Compile Include="Models\YBK_DEVICE_SPACEUSE_INFORMATION.cs" />
+    <Compile Include="Models\YBK_PATIENT_CARD.cs" />
+    <Compile Include="Models\YBK_PATIENT_MEDICAL_RECORD.cs" />
+    <Compile Include="Models\YBK_PATIENT_PATIENTINFO.cs" />
+    <Compile Include="Models\YBK_PROJECT_INFORMATION.cs" />
+    <Compile Include="Models\YBK_PROJECT_INFORMATION_CD.cs" />
+    <Compile Include="Models\YBK_QUESTIONNAIRE.cs" />
+    <Compile Include="Models\YBK_QUESTIONNAIRE_ATTRIBUTE.cs" />
+    <Compile Include="Models\YBK_QUESTIONNAIRE_ATTRIBUTE_CODOMAIN.cs" />
+    <Compile Include="Models\YBK_QUESTIONNAIRE_CASE.cs" />
+    <Compile Include="Models\YBK_QUESTIONNAIRE_CASE_SUBJECT.cs" />
+    <Compile Include="Models\YBK_QUESTIONNAIRE_RESULT.cs" />
+    <Compile Include="Models\YBK_QUESTIONNAIRE_SUBJECT.cs" />
+    <Compile Include="Models\YBK_SAMPLE_APPLICATION.cs" />
+    <Compile Include="Models\YBK_SAMPLE_APPLICATION_DELIVERY.cs" />
+    <Compile Include="Models\YBK_SAMPLE_APPLICATION_DELIVERY_CD.cs" />
+    <Compile Include="Models\YBK_SAMPLE_APPLICATION_DELIVERY_DETAILS.cs" />
+    <Compile Include="Models\YBK_SAMPLE_APPLICATION_DETAILS.cs" />
+    <Compile Include="Models\YBK_SAMPLE_BARCODE_BATCH.cs" />
+    <Compile Include="Models\YBK_SAMPLE_BARCODE_INFORMATION.cs" />
+    <Compile Include="Models\YBK_SAMPLE_INFORMATION.cs" />
+    <Compile Include="Models\YBK_SAMPLE_INFORMATION_CD.cs" />
+    <Compile Include="Models\YBK_SAMPLE_OPERATION_BASE.cs" />
+    <Compile Include="Models\YBK_SAMPLE_OPERATION_DETAILS.cs" />
+    <Compile Include="Models\YBK_SAMPLE_PIPE_INFO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
@@ -57,5 +158,4 @@
   <Target Name="AfterBuild">
   </Target>
   -->
-
- </Project>
+</Project>
