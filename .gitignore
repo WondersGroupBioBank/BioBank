@@ -19,6 +19,7 @@ x64/
 x86/
 build/
 bld/
+[Bb]in/
 [Oo]bj/
 
 # Visual Studo 2015 cache/options directory
@@ -54,7 +55,7 @@ dlldata.c
 *.tlh
 *.tmp
 *.tmp_proj
-*.log
+#.log
 *.vspscc
 *.vssscc
 .builds
