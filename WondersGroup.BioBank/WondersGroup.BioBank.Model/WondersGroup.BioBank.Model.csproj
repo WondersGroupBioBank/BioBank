@@ -144,6 +144,23 @@
     <Compile Include="Models\YBK_SAMPLE_OPERATION_BASE.cs" />
     <Compile Include="Models\YBK_SAMPLE_OPERATION_DETAILS.cs" />
     <Compile Include="Models\YBK_SAMPLE_PIPE_INFO.cs" />
+    <Compile Include="PassportModels\BioBankPassPortContext.cs" />
+    <Compile Include="PassportModels\Mapping\TB_ModuleFun_JLBMap.cs" />
+    <Compile Include="PassportModels\Mapping\TB_Module_JLBMap.cs" />
+    <Compile Include="PassportModels\Mapping\TB_PassportRole_GXBMap.cs" />
+    <Compile Include="PassportModels\Mapping\TB_Passport_JLBMap.cs" />
+    <Compile Include="PassportModels\Mapping\TB_RoleFun_GXBMap.cs" />
+    <Compile Include="PassportModels\Mapping\TB_Role_JLBMap.cs" />
+    <Compile Include="PassportModels\Mapping\TB_User_JLBMap.cs" />
+    <Compile Include="PassportModels\Mapping\V_PassportListMap.cs" />
+    <Compile Include="PassportModels\TB_ModuleFun_JLB.cs" />
+    <Compile Include="PassportModels\TB_Module_JLB.cs" />
+    <Compile Include="PassportModels\TB_PassportRole_GXB.cs" />
+    <Compile Include="PassportModels\TB_Passport_JLB.cs" />
+    <Compile Include="PassportModels\TB_RoleFun_GXB.cs" />
+    <Compile Include="PassportModels\TB_Role_JLB.cs" />
+    <Compile Include="PassportModels\TB_User_JLB.cs" />
+    <Compile Include="PassportModels\V_PassportList.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

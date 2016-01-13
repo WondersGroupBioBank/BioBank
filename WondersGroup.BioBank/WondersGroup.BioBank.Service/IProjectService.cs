@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 using WondersGroup.BioBank.Data.Infrastructure;
 using WondersGroup.BioBank.Model.Models;
 
-namespace UnionLogin.Service
+namespace WondersGroup.BioBank.Service
 {
     public interface IProjectService
     {
@@ -15,25 +15,40 @@ namespace UnionLogin.Service
 
         IEnumerable<YBK_PROJECT_INFORMATION> GetAll();
 
-        void AddProjectInfo(YBK_PROJECT_INFORMATION entity);
+        void AddProjectInfo(YBK_PROJECT_INFORMATION pro, List<YBK_PROJECT_INFORMATION_CD> cdlst);
     }
 
     public class ProjectService: IProjectService
     {
         private readonly IProjectInfomationRepository projectInfoRepository;
+        private readonly IProjectInfomationCDRepository projectCdRepository;
+
+        
         private readonly IUnitOfWork unitOfWork;
 
-        public ProjectService(IProjectInfomationRepository projectInfoRepository, IUnitOfWork unitOfWork)
+        public ProjectService(IProjectInfomationRepository projectInfoRepository, IProjectInfomationCDRepository projectCdRepository,IUnitOfWork unitOfWork)
         {
             this.projectInfoRepository = projectInfoRepository;
+            this.projectCdRepository = projectCdRepository;
             this.unitOfWork = unitOfWork;
         }
 
-        public void AddProjectInfo(YBK_PROJECT_INFORMATION entity)
+
+        public void AddProjectInfo(YBK_PROJECT_INFORMATION pro, List<YBK_PROJECT_INFORMATION_CD> cdlst)
         {
-            projectInfoRepository.Add(entity);
+            if(pro == null)
+            {
+                throw new Exception("pro is Null");
+            }
 
+            projectInfoRepository.Add(pro);
 
+            foreach(var item in cdlst)
+            {
+                item.XMID = pro.XMID;
+                projectCdRepository.Add(item);
+            }
+           
             CommitProjectInfo();
         }
 
