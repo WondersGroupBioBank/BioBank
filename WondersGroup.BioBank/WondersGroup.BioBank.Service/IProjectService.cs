@@ -192,6 +192,7 @@ namespace WondersGroup.BioBank.Service
             {
                 throw new Exception("xmid is null");
             }
+
             var comment = projectInfoRepository.GetById(xmid);
             return comment;
         }

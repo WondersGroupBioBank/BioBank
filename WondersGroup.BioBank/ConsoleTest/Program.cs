@@ -22,7 +22,12 @@ namespace ConsoleTest
             //LogHelper.SetConfig();
             //LogHelper.WriteLog("test");
             //LogHelper.WriteLog("testError",new Exception("errortest"));
+            //MemcachedClient client = new MemcachedClient("enyim.com/memcached");
+            //object name = client.Get("k11");
+            //Console.WriteLine(name.ToString());
             testMemcachedProviders();
+
+            MemcachedClient client = new MemcachedClient("enyim.com/memcached");
         }
 
         static void testMemcachedProviders()  
@@ -30,6 +35,7 @@ namespace ConsoleTest
             MemcachedClient client = new MemcachedClient("enyim.com/memcached");
             //存值  --不带过期时间的存储，Memcached将根据LRU来决定过期策略  
             bool result = client.Store(Enyim.Caching.Memcached.StoreMode.Add, "name", "dinglang");
+            
             //带过期时间的缓存    
             //bool success = client.Store(StoreMode.Add, person.UserName, person, DateTime.Now.AddMinutes(10));   
             if (result)
